@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Fogata Andina | Restaurante de cocina colombiana</title>
+  <meta name="description" content="La Fogata Andina: cocina tradicional colombiana, platos de la abuela, ambiente cálido y reservas en línea.">
+  <meta name="theme-color" content="#B5451B">
+  <link rel="icon" type="image/svg+xml" href="img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ENCABEZADO + MENÚ DE NAVEGACIÓN -->
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="La Fogata Andina, ir al inicio">
+        <img src="img/logo.svg" alt="" width="44" height="44">
+        <span class="brand__name">La Fogata <em>Andina</em></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="btn btn--primary btn--small" href="#reservas">Reservar mesa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <img class="hero__bg" src="img/hero.svg" alt="" width="1600" height="900">
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="eyebrow">Cocina tradicional colombiana</p>
+        <h1 id="hero-title">El sabor de casa, servido a fuego lento</h1>
+        <p class="hero__lead">Recetas de la abuela, ingredientes de nuestras montañas y una mesa siempre dispuesta para ti y los tuyos.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#reservas">Reservar mesa</a>
+          <a class="btn btn--ghost" href="#menu">Ver el menú</a>
+        </div>
+        <ul class="hero__facts" aria-label="Datos del restaurante">
+          <li><strong>25+</strong> años de tradición</li>
+          <li><strong>4.8</strong> valoración de clientes</li>
+          <li><strong>100%</strong> ingredientes locales</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section class="section" id="nosotros" aria-labelledby="about-title">
+      <div class="container about">
+        <figure class="about__media reveal">
+          <img src="img/about.svg" alt="Fachada del restaurante La Fogata Andina con toldo rojo y plantas en la entrada" width="800" height="600" loading="lazy">
+        </figure>
+        <div class="about__text reveal">
+          <p class="eyebrow eyebrow--dark">Nuestra historia</p>
+          <h2 id="about-title">Una cocina hecha con memoria</h2>
+          <p>La Fogata Andina nació en 1999 en la cocina de una familia cundiboyacense que quería compartir sus recetas con el barrio. Hoy seguimos cocinando igual: con leña, paciencia y productos de pequeños campesinos de la región.</p>
+          <p>Cada plato cuenta una historia. Desde el ajiaco humeante hasta la limonada de coco bien fría, todo se prepara cada día, sin atajos.</p>
+          <ul class="about__values">
+            <li><span aria-hidden="true">🌽</span> Productos de campo</li>
+            <li><span aria-hidden="true">🔥</span> Cocción lenta</li>
+            <li><span aria-hidden="true">🤝</span> Trato familiar</li>
+          </ul>
+          <a class="btn btn--outline" href="#reservas">Ven a conocernos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENÚ (filtro interactivo) -->
+    <section class="section section--sand" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--dark">Nuestra carta</p>
+          <h2 id="menu-title">Platos que llevan nuestro nombre</h2>
+          <p>Filtra por categoría y toca «Ver ingredientes» para conocer cada receta.</p>
+        </header>
+
+        <div class="tabs" role="group" aria-label="Filtrar el menú por categoría">
+          <button class="tab is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="tab" type="button" data-filter="entradas" aria-pressed="false">Entradas</button>
+          <button class="tab" type="button" data-filter="sopas" aria-pressed="false">Sopas</button>
+          <button class="tab" type="button" data-filter="fuertes" aria-pressed="false">Platos fuertes</button>
+          <button class="tab" type="button" data-filter="postres" aria-pressed="false">Postres</button>
+          <button class="tab" type="button" data-filter="bebidas" aria-pressed="false">Bebidas</button>
+        </div>
+
+        <div class="dishes" id="dishes">
+          <article class="dish" data-category="fuertes">
+            <img src="img/bandeja.jpg" alt="Bandeja paisa con arroz, frijoles, huevo, chicharrón y arepa" width="600" height="450" loading="lazy">
+            <div class="dish__body">
+              <div class="dish__top"><h3>Bandeja paisa</h3><span class="price">$38.000</span></div>
+              <p>El plato más completo de la montaña antioqueña, con todo lo que debe llevar.</p>
+              <button class="dish__more" type="button" aria-expanded="false">Ver ingredientes</button>
+              <p class="dish__details" hidden>Frijoles, arroz, chicharrón, carne molida, chorizo, huevo frito, plátano maduro, aguacate y arepa.</p>
+            </div>
+          </article>
+
+          <article class="dish" data-category="sopas">
+            <img src="img/ajiaco.jpg" alt="Plato de ajiaco santafereño con mazorca, crema y alcaparras" width="600" height="450" loading="lazy">
+            <div class="dish__body">
+              <div class="dish__top"><h3>Ajiaco santafereño</h3><span class="price">$32.000</span></div>
+              <p>Sopa bogotana espesa y reconfortante, servida con sus acompañamientos.</p>
+              <button class="dish__more" type="button" aria-expanded="false">Ver ingredientes</button>
+              <p class="dish__details" hidden>Tres tipos de papa, pollo desmechado, mazorca, guascas, crema de leche, alcaparras y aguacate.</p>
+            </div>
+          </article>
+
+          <article class="dish" data-category="sopas">
+            <img src="img/sancocho.jpg" alt="Sancocho de gallina con yuca, plátano y papa" width="600" height="450" loading="lazy">
+            <div class="dish__body">
+              <div class="dish__top"><h3>Sancocho de gallina</h3><span class="price">$30.000</span></div>
+              <p>Caldo de domingo cocinado a leña, con gallina criolla y verduras frescas.</p>
+              <button class="dish__more" type="button" aria-expanded="false">Ver ingredientes</button>
+              <p class="dish__details" hidden>Gallina criolla, yuca, plátano verde, papa, mazorca, cilantro y arroz blanco.</p>
+            </div>
+          </article>
+
+          <article class="dish" data-category="entradas">
+            <img src="img/arepa.jpg" alt="Arepa de maíz rellena de queso derretido" width="600" height="450" loading="lazy">
+            <div class="dish__body">
+              <div class="dish__top"><h3>Arepa rellena de queso</h3><span class="price">$14.000</span></div>
+              <p>Arepa de maíz asada al momento con queso campesino fundido.</p>
+              <button class="dish__more" type="button" aria-expanded="false">Ver ingredientes</button>
+              <p class="dish__details" hidden>Maíz trillado, queso campesino, mantequilla y una pizca de sal.</p>
+            </div>
+          </article>
+
+          <article class="dish" data-category="entradas">
+            <img src="img/empanadas.jpg" alt="Empanadas criollas doradas con ají" width="600" height="450" loading="lazy">
+            <div class="dish__body">
+              <div class="dish__top"><h3>Empanadas criollas (x3)</h3><span class="price">$12.000</span></div>
+              <p>Crujientes por fuera, jugosas por dentro, con nuestro ají casero.</p>
+              <button class="dish__more" type="button" aria-expanded="false">Ver ingredientes</button>
+              <p class="dish__details" hidden>Masa de maíz, relleno de carne y papa criolla, fritas en el momento. Acompañadas de ají de tomate de árbol.</p>
+            </div>
+          </article>
+
+          <article class="dish" data-category="postres">
+            <img src="img/flan.jpg" alt="Flan de caramelo con una cereza" width="600" height="450" loading="lazy">
+            <div class="dish__body">
+              <div class="dish__top"><h3>Flan de caramelo</h3><span class="price">$13.000</span></div>
+              <p>Suave y cremoso, con caramelo oscuro hecho en casa.</p>
+              <button class="dish__more" type="button" aria-expanded="false">Ver ingredientes</button>
+              <p class="dish__details" hidden>Leche, huevos de campo, azúcar, vainilla y caramelo artesanal.</p>
+            </div>
+          </article>
+
+          <article class="dish" data-category="bebidas">
+            <img src="img/limonada.png" alt="Vaso de limonada de coco con hielo y limón" width="600" height="450" loading="lazy">
+            <div class="dish__body">
+              <div class="dish__top"><h3>Limonada de coco</h3><span class="price">$9.000</span></div>
+              <p>Cremosa, fría y refrescante. La favorita de la casa.</p>
+              <button class="dish__more" type="button" aria-expanded="false">Ver ingredientes</button>
+              <p class="dish__details" hidden>Limón fresco, crema de coco, hielo triturado y un toque de panela.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--dark">Galería</p>
+          <h2 id="gallery-title">Un vistazo a nuestra mesa</h2>
+          <p>Toca una imagen para verla en grande.</p>
+        </header>
+
+        <ul class="gallery">
+          <li><button type="button" class="gallery__item" data-full="img/interior.jpg" data-caption="Salón principal con iluminación cálida"><img src="img/interior.jpg" alt="Salón principal con lámparas colgantes y mesas de madera" width="600" height="450" loading="lazy"></button></li>
+          <li><button type="button" class="gallery__item" data-full="img/terraza.jpg" data-caption="Terraza al atardecer"><img src="img/terraza.jpg" alt="Terraza con luces colgantes al atardecer" width="600" height="450" loading="lazy"></button></li>
+          <li><button type="button" class="gallery__item" data-full="img/bandeja.jpg" data-caption="Bandeja paisa"><img src="img/bandeja.jpg" alt="Bandeja paisa servida" width="600" height="450" loading="lazy"></button></li>
+          <li><button type="button" class="gallery__item" data-full="img/empanadas.jpg" data-caption="Empanadas criollas"><img src="img/empanadas.jpg" alt="Empanadas criollas con ají" width="600" height="450" loading="lazy"></button></li>
+          <li><button type="button" class="gallery__item" data-full="img/flan.jpg" data-caption="Flan de caramelo"><img src="img/flan.jpg" alt="Flan de caramelo" width="600" height="450" loading="lazy"></button></li>
+          <li><button type="button" class="gallery__item" data-full="img/limonada.png" data-caption="Limonada de coco"><img src="img/limonada.png" alt="Limonada de coco" width="600" height="450" loading="lazy"></button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESERVAS (formulario) -->
+    <section class="section section--green" id="reservas" aria-labelledby="book-title">
+      <div class="container booking">
+        <div class="booking__intro">
+          <p class="eyebrow">Reservas</p>
+          <h2 id="book-title">Reserva tu mesa</h2>
+          <p>Completa el formulario y te confirmaremos por correo o teléfono. Para grupos de más de 10 personas, escríbenos directamente.</p>
+          <ul class="booking__info">
+            <li><strong>Martes a jueves</strong> 12:00 – 21:00</li>
+            <li><strong>Viernes y sábado</strong> 12:00 – 23:00</li>
+            <li><strong>Domingo</strong> 12:00 – 18:00</li>
+            <li><strong>Lunes</strong> Cerrado</li>
+          </ul>
+        </div>
+
+        <form class="form" id="bookingForm" novalidate>
+          <div class="form__grid">
+            <div class="field">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required aria-describedby="nombre-error">
+              <span class="field__error" id="nombre-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" autocomplete="email" placeholder="tucorreo@ejemplo.com" required aria-describedby="correo-error">
+              <span class="field__error" id="correo-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="300 000 0000" required aria-describedby="telefono-error">
+              <span class="field__error" id="telefono-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="personas">Personas</label>
+              <select id="personas" name="personas" required>
+                <option value="1">1 persona</option>
+                <option value="2" selected>2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="8">7 a 8 personas</option>
+                <option value="10">9 a 10 personas</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" required aria-describedby="fecha-error">
+              <span class="field__error" id="fecha-error" role="alert"></span>
+            </div>
+            <div class="field">
+              <label for="hora">Hora</label>
+              <select id="hora" name="hora" required>
+                <option value="12:00">12:00 m.</option>
+                <option value="13:00" selected>1:00 p. m.</option>
+                <option value="14:00">2:00 p. m.</option>
+                <option value="15:00">3:00 p. m.</option>
+                <option value="18:00">6:00 p. m.</option>
+                <option value="19:00">7:00 p. m.</option>
+                <option value="20:00">8:00 p. m.</option>
+              </select>
+            </div>
+            <div class="field field--full">
+              <label for="notas">Comentarios (opcional)</label>
+              <textarea id="notas" name="notas" rows="3" placeholder="Alergias, celebración especial, silla para bebé…"></textarea>
+            </div>
+          </div>
+          <button class="btn btn--gold btn--block" type="submit">Confirmar reserva</button>
+          <p class="form__success" id="formSuccess" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (desplegables) -->
+    <section class="section" id="preguntas" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section__head">
+          <p class="eyebrow eyebrow--dark">Preguntas frecuentes</p>
+          <h2 id="faq-title">Lo que más nos preguntan</h2>
+        </header>
+
+        <div class="faq">
+          <div class="faq__item">
+            <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-btn-1">¿Tienen opciones vegetarianas?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq__a" id="faq-1" role="region" aria-labelledby="faq-btn-1" hidden><p>Sí. Tenemos arepas, ensaladas y una sopa de verduras de la huerta. Avísanos al reservar y adaptamos tu plato.</p></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-btn-2">¿Aceptan pagos con tarjeta?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq__a" id="faq-2" role="region" aria-labelledby="faq-btn-2" hidden><p>Aceptamos efectivo, tarjetas débito y crédito, y pagos por transferencia.</p></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-btn-3">¿Puedo llevar a mis hijos?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq__a" id="faq-3" role="region" aria-labelledby="faq-btn-3" hidden><p>¡Por supuesto! Contamos con sillas para bebés y un menú infantil con porciones pequeñas.</p></div>
+          </div>
+          <div class="faq__item">
+            <h3><button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-btn-4">¿Hacen eventos y celebraciones?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+            <div class="faq__a" id="faq-4" role="region" aria-labelledby="faq-btn-4" hidden><p>Sí, organizamos cumpleaños, reuniones familiares y almuerzos empresariales. Contáctanos para recibir una propuesta.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer" id="contacto">
+    <div class="container footer__grid">
+      <section aria-labelledby="f-brand">
+        <a class="brand brand--light" href="#inicio">
+          <img src="img/logo.svg" alt="" width="40" height="40">
+          <span class="brand__name" id="f-brand">La Fogata <em>Andina</em></span>
+        </a>
+        <p class="footer__about">Cocina colombiana de verdad, hecha con cariño desde 1999.</p>
+      </section>
+
+      <section aria-labelledby="f-contact">
+        <h2 class="footer__title" id="f-contact">Contacto</h2>
+        <address>
+          Carrera 7 # 45-20, Bogotá<br>
+          <a href="tel:+573000000000">+57 300 000 0000</a><br>
+          <a href="mailto:hola@lafogataandina.co">hola@lafogataandina.co</a>
+        </address>
+      </section>
+
+      <nav aria-labelledby="f-links">
+        <h2 class="footer__title" id="f-links">Enlaces</h2>
+        <ul class="footer__links">
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#reservas">Reservas</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <section aria-labelledby="f-social">
+        <h2 class="footer__title" id="f-social">Síguenos</h2>
+        <ul class="footer__links">
+          <li><a href="#" rel="noopener">Instagram</a></li>
+          <li><a href="#" rel="noopener">Facebook</a></li>
+          <li><a href="#" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; <span id="year">2026</span> La Fogata Andina. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox de la galería -->
+  <dialog class="lightbox" id="lightbox" aria-label="Imagen ampliada">
+    <button class="lightbox__close" type="button" id="lightboxClose" aria-label="Cerrar imagen">&times;</button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </dialog>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Volver arriba" hidden>↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

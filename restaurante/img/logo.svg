@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logo La Fogata Andina">
+  <circle cx="32" cy="32" r="30" fill="#B5451B"/>
+  <circle cx="32" cy="26" r="9" fill="#D9A441"/>
+  <path d="M6 46 L22 28 L31 38 L42 24 L58 46 Z" fill="#FBF4E8"/>
+  <path d="M6 46 L22 28 L31 38 L42 24 L58 46 Z" fill="none" stroke="#2F4A3A" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M10 50 H54" stroke="#FBF4E8" stroke-width="3" stroke-linecap="round"/>
+</svg>
